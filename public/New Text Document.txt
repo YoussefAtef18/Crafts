@@ -1,0 +1,11 @@
+<input type="file" name="" id="firstImg" style="display: none; visibility: none;" onchange = "getImage(this.value);">
+                
+                <div id="display-image"></div>
+          
+          <script>
+        function getImage(imagename){
+       var newimg = imagename.replace(/^.*\\/,"");
+      $('#display-image').html(newimg);
+    }
+  </script>
+

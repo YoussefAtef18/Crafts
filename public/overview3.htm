@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRAFTS</title>
+    <link rel="icon" href="images/house commerce.png">
+<!-- css and js bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<!--normalize file-->  
+<link rel="stylesheet" href="css/normalize.css" />
+<!--css main file-->  
+<link rel="stylesheet" href="css/index.css">  
+<!-- font awsome library for icons-->
+<link rel="stylesheet" href="css/all.min.css">
+<!--font awsowm-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"> 
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+<style>
+    section {  
+  min-height: 100vh;  
+  width: 100%;  
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+ }  
+ .container2 {  
+  max-width: 400px;  
+  width: 90%;  
+  padding: 10px;  
+  box-shadow: 0px 0px 5px #043644;  
+  border-radius: 8px;  
+  background-color: white;  
+ }  
+ .step {  
+  display: none;  
+ }  
+ .step.active {  
+  display: block;  
+ }  
+ .form-group {  
+  margin: 20px auto;
+ }  
+ .form-group input{   
+  border: 1.5px solid #043644;  
+  padding: 5px;  
+  font-size: 14px; 
+  margin-top: 5px;  
+  border-radius: 20px;  
+ }  
+ .form-group input[type="email"] {  
+  width: 110%;  
+ }  
+ .form-group input[type="text"]{  
+  width: 100%;  
+ } 
+ .form-group input[type="password"]{  
+  width: 100%;  
+  
+ } 
+input{
+    background: none;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text-color);
+}
+ button.next-btn,    
+ button.submit-btn {  
+  display: flex;
+  margin: 20px auto;
+  padding: 8px 25px;  
+  border: none;  
+  outline: none;  
+  background-color: #d60000;  
+  font-family: "Montagu Slab", serif;
+  font-size: 18px;  
+  cursor: pointer;  
+  color: white;
+  border-radius: 20px;
+  /* text-align: right; */  
+ }  
+ button.next-btn:hover {  
+    background-color:#043644;  
+
+ }  
+ button.submit-btn {  
+  background-color: #d60000;  
+ }  
+ button.submit-btn:hover{
+    background-color:#043644;  
+ }
+ label{
+     color: #043644;
+     font-size: 18px;
+     font-weight: 500;
+ }
+ @media (max-width: 870px) {
+
+  .container2 {  
+    margin-top: 150px; 
+ } 
+ 
+}
+</style>
+</head>
+<body>
+    <!--start header-->
+    <div class="header">
+        <div class="container">
+          <a href="index.html" class="logo"><img src="images/house commerce.png" width="70px" height="65px">Crafts</a>
+          <div class="nav">
+              <i id="icon" class="bi bi-list"></i>
+              <ul class="ull">
+                    <li><a class="log" href="index2.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>  
+    <!--end header-->
+    <div class="login">
+    <div class="container1">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <!-- <form action="" class="sign-in-form">
+                    <h2 class="title">Sign in</h2>
+                    
+                        <div class="input-field">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username">
+                        </div>
+                        <div class="input-field">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="password">
+                        </div>
+                       <div class="password"><a href="" ><p>Forgot password?</p></a></div>
+                </form> -->
+                <section>  
+                    <div class="container2">  
+                     <form>  
+                      <div class="step step-1 active">  
+                       <div class="form-group">  
+                        <label for="email">Email</label>  
+                        <input type="email" id="email" name="email"> 
+                       </div>    
+                       <button type="button" class="next-btn">Next</button>  
+                      </div>  
+                      <div class="step step-2">  
+                       <div class="form-group">  
+                        <label for="code">Code</label>  
+                        <input type="text" id="code" name="Code">  
+                       </div>  
+                       <button type="button" class="next-btn">Next</button>  
+                      </div>  
+                      <div class="step step-3">  
+                       <div class="form-group">  
+                        <label for="password">New password</label>  
+                        <input type="password" id="pass" name="password">  
+                       </div>  
+                       <div class="form-group">  
+                        <label for="password">Confirm password</label>  
+                        <input type="password" id="password confirm" name="password confirm">  
+                       </div>   
+                       <button type="submit" class="submit-btn">Update</button>  
+                      </div>  
+                     </form>  
+                    </div>  
+                   </section>  
+            </div>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                  <h3>Remember the password?</h3>
+                  <button class="btn transparent" id="sign-up-btn"><a href="index2.html">signin</a>
+                  </button>
+                </div>
+                <img src="images/undraw_forgot_password_re_hxwm.svg" class="image" alt="password" />
+              </div>
+        </div>
+    </div>
+    </div>
+
+ <!--start footer-->
+ <footer>
+    <p><i class="far fa-copyright"></i>  2021 - All rights reserved to FCI</p>
+</footer>
+<!--end footer-->
+<script>
+const steps = Array.from(document.querySelectorAll("form .step"));  
+ const nextBtn = document.querySelectorAll("form .next-btn");  
+ const form = document.querySelector("form");  
+ nextBtn.forEach((button) => {  
+  button.addEventListener("click", () => {  
+   changeStep("next");  
+  });  
+ });    
+//  form.addEventListener("submit", (e) => {  
+//   e.preventDefault();  
+//   const inputs = [];  
+//   form.querySelectorAll("input").forEach((input) => {  
+//    const { name, value } = input;  
+//    inputs.push({ name, value });  
+//   });  
+//   console.log(inputs);  
+//   form.reset();  
+//  });  
+ function changeStep(btn) {  
+  let index = 0;  
+  const active = document.querySelector(".active");  
+  index = steps.indexOf(active);  
+  steps[index].classList.remove("active");  
+  if (btn === "next") {  
+   index++;  
+  }
+  steps[index].classList.add("active");  
+ }  
+</script>
+</body>
+</html>

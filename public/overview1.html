@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRAFTS</title> 
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png" >
+<!-- css and js bootstrap-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+<!--normalize file-->  
+<link rel="stylesheet" href="css/normalize.css" />
+<!--css main file-->  
+<link rel="stylesheet" href="css/all.min.css">
+
+<link rel="stylesheet" href="css/index.css">  
+<!-- font awsome library for icons-->
+<!--font awsowm-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css"> 
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montagu+Slab:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+      <!-- Start Header -->
+      <div class="header">
+        <div class="container">
+          <a href="index.html" class="logo"><img src="/images/house commerce.png" width="70px" height="65px">Crafts</a>
+          <div class="nav">
+              <i id="icon" class="bi bi-list"></i>
+              <ul class="ull">
+                    <li><a href="#services">About</a></li>
+                    <li><a href="#portifolio">Services</a></li>
+                    <li><a href="#about">Catigories</a></li>
+                    <li><a href="#pricing">Contact</a></li>
+                    <li><a class="log" href="overview2.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+<script>
+$("#icon").click(function () {
+    $(".ull").toggle();             
+                            })
+</script>
+      <!-- End Header -->
+      <!-- Start Landing -->
+      <div class="landing">
+        <div class="container">
+          <div class="text">
+            <h1>Welcome, Shop and sell now</h1>
+            <p>All of our products are professionally handmade, you can buy whatever you want and also sell your products here.</p>
+            <button class="btn"><a href="#catigories"></a>SHOP NOW</button>
+          </div>
+          <div class="imagee">
+            <img src="/images/landing1.png" alt="home-commerce" />
+          </div>
+          <a href="#articles" class="go-down">
+            <i class="bi bi-chevron-double-down"></i>
+          </a>
+        </div>    
+      </div>
+      <!-- End Landing -->
+  <!--start footer-->
+    <footer>
+      <p><i class="far fa-copyright"></i>  2021 - All rights reserved to FCI</p>
+  </footer>
+  <!--end footer-->
+</body> 
+</html>
