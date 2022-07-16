@@ -1,0 +1,8 @@
+mixin reviewCard(review)
+  .swiper-slide.review-slide
+    .img-review
+      img#avatar1(src=`/images/users/${review.user.photo}` alt=`${review.user.photo}`)
+      h5#profileName.user-name= review.user.name
+    .arrow
+    blockquote#rev-text= review.review
+    
