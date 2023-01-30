@@ -12,10 +12,10 @@ router
   .post(
     authController.protect,
     productController.setUserId,
-    productController.uploadProductImages, 
-    productController.resizeProductImages, 
+    productController.uploadProductImages,
+    productController.resizeProductImages,
     productController.createProduct
-    ); 
+    );
 
 router.route('/').get(productController.getAllProducts);
 router.route('/hide/:id').patch(productController.hide)
