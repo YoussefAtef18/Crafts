@@ -13,9 +13,9 @@ block content
         li.list(data-filter='all') All
         li.list(data-filter='Accessoires') Accessories
         li.list(data-filter='Art') Art
-        li.list(data-filter='Crocet') Crochet
+        li.list(data-filter='Crocet') Crocet
         li.list(data-filter='Cooking') Cooking
-        li.list(data-filter='Tailor') Tailoring
+        li.list(data-filter='Tailor') Tailor
         li.list(data-filter='Wooden') Wooden
         li.list(data-filter='Other') Other
 
@@ -28,6 +28,7 @@ block content
           span= `${product.price} EGP`
           if user
             if product.user._id == user.id
+              a.btn-edt(href=(`/editProduct/${product.id}`)) edit
             else 
               a.btn-add
                 i.bi.bi-cart3.addToCart(data-product-id=`${product.id}`) 

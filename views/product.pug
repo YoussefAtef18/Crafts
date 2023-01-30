@@ -31,7 +31,10 @@ block content
               a.btn_logout(href='') login to buy
 
         if user
-          button.btn.addToCart(data-product-id=`${product.id}`) Add to cart
+          if product.user._id == user.id
+            a.btn(href=(`/editProduct/${product.id}`)) edit
+          else
+            button.btn.addToCart(data-product-id=`${product.id}`) Add to cart
         else 
           a.btn_logout(href='/login') log in to buy
         h3

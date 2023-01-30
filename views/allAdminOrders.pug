@@ -28,13 +28,13 @@ block content
             each order in orders 
               .order-user.price-button
                 .order-info
-                each product in products
+                each product in order.products
                   .profile-order.pro-card
-                    img(src=`/images/products/${product.images[0]}` alt=`${product.title}`)
+                    img(src=`/images/products/${product.product.images[0]}` alt=`${product.product.title}`)
                     .details-order
-                      h5.product-title= product.title
+                      h5.product-title= product.product.title
                       .price-button
-                        span= `${product.price} EGP`
+                        span= `${product.product.price} EGP`
                       //- a.detail(href=`/products/${product.id}`) Details
                 button.deleteOrderBtn(data-order-id=`${order.id}`) delete
 

@@ -6,7 +6,6 @@ block content
             .forms-container
                 .advertisement
                     form.ad_form
-                                    //- (method= 'POST', url= 'http://127.0.0.1:4000/api/products/addProduct',)
                         .form_ad
                             label.ad_label(for='ad_title') Advertisement title
                             input#title.ad_input(type='text' placeholder='Title' required='required' minlength='4', name= 'title')
@@ -19,14 +18,14 @@ block content
                             datalist#Catigory
                                 option(value='Accessories')
                                 option(value='Art')
-                                option(value='Crochet')
+                                option(value='Crocet')
                                 option(value='Cooking')
-                                option(value='Tailoring')
-                                option(value='Wooden crafts')
+                                option(value='Tailor')
+                                option(value='Wooden')
                                 option(value='Other')
                         .form_ad
-                            label.ad_label(for='country') Your country
-                            input#country.ad_input(placeholder='country' list='city' required='required' name= 'city')
+                            label.ad_label(for='country') Your City
+                            input#country.ad_input(placeholder='city' list='city' required='required' name= 'city')
                             datalist#city
                                 option(value='Alexandria')
                                 option(value='Aswan')

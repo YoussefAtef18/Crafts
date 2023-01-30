@@ -39,7 +39,7 @@ block content
                   h5.product-title= product.title
                   span= `${product.price} EGP`
                   .price-button
-                    a.btn-add(href=(`/editProduct/${product.id}`)) edit
+                    a.btn-update-mypro(href=(`/editProduct/${product.id}`)) edit
                     if (product.available === true)
                       button.hideProductBtn(data-product-id=`${product.id}`, data-available =`${product.available=false}`) hide
                     else 

@@ -12,12 +12,26 @@ block content
       //- // checkout
       .checkout
         h2.section-heading Payment Details
-        .payment-form               
+        .payment-form
+          .payment-method
+            button#btnCredit.method.checkoutOrder
+              i.bi.bi-credit-card-fill.cart-icons
+              span Credit Card
+              i.bi.bi-check-circle-fill.checkmark
+            button#btnAddress.method.selected
+              i.bi.bi-house-door-fill.cart-icons
+              span Cash on delivery
+              i.bi.bi-check-circle-fill.checkmark
+          //- // div  credit images
+          .payment-imgs
+            img(src='images/visa.png' alt='' width='60px' height='40px')
+            img(src='images/mastercard-logo.png' alt='' width='60px' height='60px')
+            img(src='images/pay.png' alt='' width='70px' height='40px')
           //- // address f0rm
           form#address.form-cart
             .cardholder
               label.label-default(for='cardholder') Your City
-              input#city.input-cart(list='cities' value=`${user.country}` required='required')
+              input#city.input-cart(list='cities' required='required')
               datalist#cities
                 option(value='Alexandria')
                 option(value='Aswan')
@@ -58,11 +72,11 @@ block content
                 label.label-default(for='flat') Flat Number
                 .input-flex
                   input#flat.input-cart(type='number' name='flat')
-              .cvv
-                label.label-default(for='phone') Phone Number
-                input#phone.input-cart(type='text' value=`${user.phone}` name='phone')
-            button.onDelivery.btn-cart
-              b on delivery
+            .phone-num
+              label.label-default(for='phone') Phone number
+              input#phone.input-cart(type='text' value=`${user.phone}` name='phone')
+            button.onDelivery.btn-cart.margin-top
+              b Pay
               span#payAmount 0
 
       .cart
@@ -109,8 +123,7 @@ block content
             span
               span#total 0
               |  EGP
-        button.checkoutOrder.btn-cart
-          b visa card
+       
   script(src='cart.js')
   script(src='index.js')
 
