@@ -44,7 +44,7 @@ exports.resizeProductImages = catchAsync(async (req, res, next) => {
       const filename = `product-${Date.now()}-${i + 1}.jpeg`;
 
       await sharp(file.buffer)
-        .resize(2000, 1333)
+        .resize(1000, 1000)
         .toFormat('jpeg')
         .jpeg({ quality: 90 })
         .toFile(`public/images/products/${filename}`);
@@ -69,6 +69,19 @@ exports.hide = catchAsync(async (req, res, next) => {
     status: 'success',
     data: {
       product
+    }
+  });
+});
+
+exports.search = catchAsync(async (req, res, next) => {
+  var query = { title: { $regex: `.*${req.params.title}.*`, $options: 'i' }};
+  const products = await Product.find(query)
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      result: products.length,
+      data: products
     }
   });
 });

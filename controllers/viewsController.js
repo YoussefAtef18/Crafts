@@ -9,14 +9,13 @@ const catchAsync = require('../utils/catchAsync');
 exports.getOverview = catchAsync(async (req, res) => {
   //get all catygories and get all products put not for the current user and only available 
   const categories = await Category.find(); 
-  const products = await Product.find({ available: { $ne: false }}).sort({createdAt: 1}).limit(7);
+  const products = await Product.find({ available: { $ne: false }}).sort({createdAt: -1}).limit(7);
 
   res
     .status(200)
     .set(
       'Content-Security-Policy',
-      "upgrade-insecure-requests",
-      "connect-src 'self' https://cdnjs.cloudflare.com https://unpkg.com/swiper/swiper-bundle.min.js"
+      "connect-src 'self' https://cdnjs.cloudflare.com"
       )
     .render('overview', {
       title: 'Home',
@@ -317,9 +316,6 @@ exports.getAllAdminUsers= catchAsync(async (req, res, next) => {
 exports.getAllAdminOrders= catchAsync(async (req, res, next) => {
   //find all orders for admin
   const orders = await Order.find();
-  //find products in orders with the returned IDs
-  const productIDs = orders.map(el => el.products.product.id);
-  const products = await Product.find({ _id: { $in: productIDs } }); 
   
   res
     .status(200)
@@ -329,8 +325,7 @@ exports.getAllAdminOrders= catchAsync(async (req, res, next) => {
     )
     .render('allAdminOrders', {
       title: 'All orders',
-      orders,
-      products
+      orders
     });
 });
 

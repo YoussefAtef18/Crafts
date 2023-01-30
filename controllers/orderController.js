@@ -66,16 +66,14 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
         }),
         mode: 'payment',
       });
-    })
-    .then(session => {
-      res.status(201).json({
-        status: 'success',
-        products: products,
-        totalSum: total,
-        session: session
-      });
-    })
-    .catch(err => console.log(err));
+    }).then(session => {
+        res.status(201).json({
+          status: 'success',
+          products: products,
+          totalSum: total,
+          session: session
+        });
+      }).catch(err => console.log(err));
 });
 
 
@@ -96,6 +94,13 @@ exports.orderOnDelivery = catchAsync(async (req, res, next) => {
       const flatNum = req.body.flatNum;
       const phone = req.body.phone;
       new Email1(user, city, address, phone, floorNum, flatNum, products).order();
+      const order = Order.create({
+        user: req.user,
+        products: products
+      })
+    .then(result => {
+        return req.user.clearCart();
+      })
       res.status(200).json({
         status: 'success',
         userEmail,
