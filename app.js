@@ -60,8 +60,6 @@ app.use(xss());
 
 app.use(compression());
 
-app.use(express.static(`${__dirname}/public`));
-
 // Test middleware
 app.use((req, res, next) => {
   req.requireTime = new Date().toISOString();
